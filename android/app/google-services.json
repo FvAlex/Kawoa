@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "889290311173",
+    "firebase_url": "https://kawoa-a3e1f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "kawoa-a3e1f",
+    "storage_bucket": "kawoa-a3e1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889290311173:android:626d3358e7a426661afe6c",
+        "android_client_info": {
+          "package_name": "com.example.projet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp5iMyVoNwKzLyn0LS9r0fhnX735CBIPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
