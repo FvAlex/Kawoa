@@ -3,10 +3,10 @@ import 'dart:html';
 import 'dart:math';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:projet/modal/Champ.dart';
-import 'package:projet/modal/Exploitation.dart';
-import 'package:projet/screen/customer_detail/widget/ExploitationInfo.dart';
-import '../../../modal/Customer.dart';
+import 'package:projet/modal/champ.dart';
+import 'package:projet/modal/exploitation.dart';
+import 'package:projet/screen/customer_detail/widget/exploitation_info.dart';
+import '../../../modal/customer.dart';
 
 class CustomerInfo extends StatefulWidget {
   const CustomerInfo({Key? key}) : super(key: key);
@@ -27,11 +27,9 @@ class _CustomerInfoState extends State<CustomerInfo> {
   Future<List<Customer>> getDataFromFirebaseToJoueur() async {
     var response = await FirebaseDatabase.instance.ref().child("/joueur/").get();
     var decode = jsonEncode(response.value);
-    print(decode);
     List<Customer> result = List<Customer>.from(json
         .decode(decode)
         .map((joueur) => Customer.fromJson(joueur)));
-    print(result);
     //List<Customer> result = [...json.decode(decode).values.map((customer) => Customer.fromJson(customer))];
     /*µsetState(() {
       customerList = result;

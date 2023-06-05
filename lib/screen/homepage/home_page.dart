@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:projet/screen/customer_detail/widget/CustomerInfo.dart';
+import 'package:projet/screen/customer_detail/widget/customer_info.dart';
 
 
 

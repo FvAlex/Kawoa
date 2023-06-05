@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:projet/modal/Kafe.dart';
-import 'package:projet/screen/customer_detail/widget/KafeInfo.dart';
+import 'package:projet/modal/kafe.dart';
+import 'package:projet/screen/customer_detail/widget/kafe_info.dart';
 
-import '../../../modal/Plan.dart';
+import '../../../modal/plan.dart';
 
 
 class PlanInfo extends StatefulWidget {
@@ -29,7 +29,7 @@ class _PlanInfoState extends State<PlanInfo> {
 
   Future<List<Plan>> getDataFromFirebaseToPlan() async {
     var response = await FirebaseDatabase.instance.ref().child(
-        "/joueur/${widget.id_joueur}/exploitation/${widget
+        "/joueur/1/exploitation/${widget
             .id_exploitation}/champs/${widget.id_champ}/plan/").get();
     var decode = jsonEncode(response.value);
     List<Plan> result = List<Plan>.from(

@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:projet/screen/customer_detail/widget/GATOInfo.dart';
+import 'package:projet/screen/customer_detail/widget/gato_info.dart';
 
-import '../../../modal/Kafe.dart';
+import '../../../modal/kafe.dart';
 
 
 class KafeInfo extends StatefulWidget {
@@ -28,7 +28,7 @@ class _KafeInfoState extends State<KafeInfo> {
   }
 
   Future<List<Kafe>> getDataFromFirebaseToKafe() async {
-    var response = await FirebaseDatabase.instance.ref().child("/joueur/${widget.id_joueur}/exploitation/${widget.id_exploitation}/champs/${widget.id_champ}/plan/${widget.id_plan}/kafe/0").get();
+    var response = await FirebaseDatabase.instance.ref().child("/joueur/0/exploitation/0/champs/0/plan/0/kafe/0/").get();
     var decode = jsonEncode(response.value);
     print(decode);
     List<Kafe> result = List<Kafe>.from(json.decode(decode).map((kafe) => Kafe.fromJson(kafe)));

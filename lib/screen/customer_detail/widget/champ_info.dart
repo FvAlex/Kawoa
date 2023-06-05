@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:projet/screen/customer_detail/widget/PlanInfo.dart';
+import 'package:projet/screen/customer_detail/widget/plan_info.dart';
 
-import '../../../modal/Champ.dart';
+import '../../../modal/champ.dart';
 
 class ChampInfo extends StatefulWidget {
   late int id_exploitation;
@@ -28,7 +28,7 @@ class _ChampInfoState extends State<ChampInfo> {
   Future<List<Champ>> getDataFromFirebaseToChamp() async {
     var response = await FirebaseDatabase.instance.ref()
         .child(
-        "/joueur/${widget.id_joueur}/exploitation/${widget.id_exploitation}/champs/")
+        "/joueur/1/exploitation/${widget.id_exploitation}/champs/")
         .get();
     var decode = jsonEncode(response.value);
     List<Champ> result = List<Champ>.from(
